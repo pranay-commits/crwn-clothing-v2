@@ -1,43 +1,45 @@
+import Directory  from './components/directory/directory.component'
+
+import jacket from './images/jackets.jpg'
+import hats from './images/hats.jpg'
+import men from './images/men.jpg'
+import women from './images/women.jpg'
+import sneakers from './images/sneakers.jpg'
+
 const App = () => {
-  return (
-    <div className='categories-container'>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Hats</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Jackets</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Sneakers</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Womens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div className='category-container'>
-        {/* <img /> */}
-        <div className='category-body-container'>
-          <h2>Mens</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-    </div>
-  );
-};
+
+  const categories = [
+    {
+      id: 1,
+      title: "hats",
+      imageUrl: hats
+    },
+    {
+      id: 2,
+      title: "jackets",
+      imageUrl: jacket
+    },
+    {
+      id: 3,
+      title: "sneakers",
+      imageUrl: sneakers
+    },
+    {
+      id: 4,
+      title: "womens",
+      imageUrl: women
+    },
+    {
+      id: 5,
+      title: "mens",
+      imageUrl: men
+    }
+  ]
+  
+
+  return(
+   <Directory categories={categories} ></Directory> 
+  )
+}
 
 export default App;
